@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Visor de Álbum</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f5f5f5; /* Cambia el color de fondo según tus preferencias */
+    }
+
+    #album-container {
+      position: relative;
+    }
+
+    #album-image {
+      max-width: 100%;
+      height: auto;
+    }
+
+    #btn-view-album {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Contenedor para la imagen y el botón -->
+  <div id="album-container">
+    <!-- Imagen 1 (súbela desde tu ordenador) -->
+    <img id="album-image" src="https://i.postimg.cc/DwDY2gtW/ALB-M.jpg" alt="Imagen 1" loading="lazy">
+
+    <!-- Botón interactivo -->
+    <button id="btn-view-album" onclick="mostrarSegundaImagen()">Da clic para ver el álbum</button>
+  </div>
+
+  <!-- JavaScript para cambiar la imagen al hacer clic -->
+  <script>
+    function mostrarSegundaImagen() {
+      // Cambiar la URL de la imagen 2 (desde tu alojamiento online)
+      document.getElementById("album-image").src = "https://i.postimg.cc/wjKmgRwq/POSICI-N.jpg";
+      // Ocultar el botón después de hacer clic (opcional)
+      document.getElementById("btn-view-album").style.display = "none";
+      // Agrega más funciones o lógica según tus necesidades
+    }
+  </script>
+
+</body>
+</html>
